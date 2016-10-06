@@ -11,7 +11,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.orangecoastcollege.cs273.vnguyen629.alohamusic.MediaActivity"
     android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="0
+    ">
 
     <ImageView
         android:layout_width="237dp"
@@ -28,7 +29,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/ukuleleButton"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:onClick="playMedia"
+        android:layout_weight="0" />
 
     <ImageView
         android:layout_width="240dp"
@@ -37,27 +40,32 @@
         android:id="@+id/ipuImageView"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+        android:layout_marginTop="5dp" />
 
     <Button
         android:text="@string/ipu_button_play_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/ipuButton"
-        android:layout_marginBottom="5dp"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:onClick="playMedia"
+        android:layout_weight="0" />
 
     <VideoView
-        android:layout_width="match_parent"
-        android:layout_height="115dp"
-        android:id="@+id/hulaVideoView" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hulaVideoView"
+        android:layout_weight="2"
+        android:layout_gravity="center" />
 
     <Button
         android:text="@string/hula_button_watch_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/hulaButton"
-        android:layout_marginTop="5dp"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:onClick="playMedia"
+        android:layout_weight="0" />
 
 </LinearLayout>
